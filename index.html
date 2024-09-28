@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            #imagenes-alineadas {
+                display: flex;
+                justify-content: flex-start;
+                gap: 10px;
+            }
+
+            #imagenes-alineadas img {
+                width: 200px;
+                height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Requerimiento 1</h2>
+        <img
+            id="imagen-a-trabajar"
+            src="https://placedog.net/480
+"
+            alt=""
+        />
+
+        <h2>Requerimiento 2</h2>
+
+        <p>Puedes escoger 10 stickers</p>
+        <div id="imagenes-alineadas">
+            <div id="bloque-imagen-select">
+                <img src="assets/imgs/Sticker 1.png" alt="" />
+                <input type="number" id="input_1" value="0" min="0" />
+            </div>
+            <div id="bloque-imagen-select">
+                <img src="assets/imgs/Sticker 2.png" alt="" />
+                <input type="number" id="input_2" value="0" min="0" />
+            </div>
+            <div id="bloque-imagen-select">
+                <img src="assets/imgs/Sticker 3.png" alt="" />
+                <input type="number" id="input_3" value="0" min="0" />
+            </div>
+        </div>
+        <span id="resultado_requerimiento_2">0</span>
+
+        <br />
+        <h2>Requerimiento 3</h2>
+
+        <h3>Ingresa el password</h3>
+        <select id="select_1">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+
+        <select id="select_2">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+
+        <select id="select_3">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+        <button
+            id="verificar_contraseña"
+            onclick="
+        digito_1 = document.querySelector('#select_1').value
+        digito_2 = document.querySelector('#select_2').value
+        digito_3 = document.querySelector('#select_3').value
+        password_ingresada = digito_1 + digito_2 + digito_3;
+        resultado_contrasena = document.querySelector('#resultado_contrasena');
+        if (password_ingresada === '911') {
+            resultado_contrasena.innerHTML = 'Password 1 correcto';
+        } else if (password_ingresada === '714') {
+            resultado_contrasena.innerHTML = 'Password 2 correcto';
+        } else {
+            resultado_contrasena.innerHTML = 'Password incorrecto';
+        }
+        "
+        >
+            Verificar
+        </button>
+        <p id="resultado_contrasena"></p>
+    </body>
+    <script src="script.js"></script>
+</html>
